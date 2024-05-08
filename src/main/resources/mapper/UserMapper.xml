@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 配置SQL语句和Java对象之间的映射-->
+<!-- 映射文件的约束信息-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper为映射的根节点， namespace指定Dao接口的完整类名
+     mybatis会依据这个接口动态创建一个实现类去实现这个接口
+     而这个实现类是一个mapper对象-->
+<!-- namespace用来标识映射文件-->
+<mapper namespace = "dao.UserMapper">
+    <!-- select标签用于查询语句模板的编写，其中的id用于唯一标识SQL语句块
+        Java通过id属性的值找对对应的SQL语句-->
+    <select  id = "getUserById" parameterType = "int"
+             resultType = "com.itheima.pojo.User">
+        select * from employee where id = #{id}
+    </select>
+
+    <insert id="addUser" parameterType="com.itheima.pojo.User">
+        INSERT INTO employee (id, name, age, posotion)
+        VALUES (#{id}, #{name}, #{age}, #{posotion})
+    </insert>
+
+    <delete id="deleteUser" parameterType="com.itheima.pojo.User">
+        DELETE FROM employee WHERE id = #{id}
+    </delete>
+
+    <update id="updateUser" parameterType = "com.itheima.pojo.User">
+        UPDATE employee SET name = #{name}, age = #{age}, posotion = #{posotion} WHERE id = #{id}
+    </update>
+
+</mapper>
