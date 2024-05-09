@@ -29,4 +29,10 @@
         UPDATE employee SET name = #{name}, age = #{age}, posotion = #{posotion} WHERE id = #{id}
     </update>
 
+    <select id="selectAllUser" resultType="map">
+        SELECT * FROM employee
+    </select>
+
+
+
 </mapper>

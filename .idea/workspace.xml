@@ -4,13 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a285b5e-71e0-4699-b2a8-160c1e744dca" name="Changes" comment="我的工作区第一次提交初始代码（使用dao接口实现了数据库的增删查改操作）">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="6a285b5e-71e0-4699-b2a8-160c1e744dca" name="Changes" comment="第一次在我的工作区提交初始代码（使用dao接口实现了数据库的增删查改操作）">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CRUDUI/Inquire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/MyBatisUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CRUDUI/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CRUDUI/Crud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CRUDUI/Crud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CRUDUI/Crud.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -20,6 +35,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,24 +46,22 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2g8u0ixDBkoAPDYwIs5u8Ghsgj9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Java/idea/idea_code/experiment2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Java/idea/idea_code/experiment1&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -61,20 +75,10 @@
     ]
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="experiment2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="experiment2" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java\idea\idea_code\experiment2\src\main\java" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -87,6 +91,11 @@
       <workItem from="1715091312784" duration="707000" />
       <workItem from="1715153093424" duration="4500000" />
       <workItem from="1715158290528" duration="91000" />
+      <workItem from="1715158389802" duration="1128000" />
+      <workItem from="1715159551946" duration="2468000" />
+      <workItem from="1715169774448" duration="6538000" />
+      <workItem from="1715220042112" duration="6672000" />
+      <workItem from="1715252623972" duration="5752000" />
     </task>
     <task id="LOCAL-00001" summary="初始代码（使用dao接口实现了数据库的增删查改操作）">
       <created>1715154937503</created>
@@ -123,7 +132,63 @@
       <option name="project" value="LOCAL" />
       <updated>1715155785226</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="初始代码（使用dao接口实现了数据库的增删查改操作）">
+      <created>1715158483415</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715158483415</updated>
+    </task>
+    <task id="LOCAL-00007" summary="第一次在我的工作区提交初始代码（使用dao接口实现了数据库的增删查改操作）">
+      <created>1715158520824</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715158520824</updated>
+    </task>
+    <task id="LOCAL-00008" summary="初始代码（使用dao接口实现了数据库的增删查改操作）">
+      <created>1715158984710</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715158984710</updated>
+    </task>
+    <task id="LOCAL-00009" summary="初始代码（使用dao接口实现了数据库的增删查改操作）">
+      <created>1715159116579</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715159116579</updated>
+    </task>
+    <task id="LOCAL-00010" summary="初始代码（使用dao接口实现了数据库的增删查改操作）">
+      <created>1715159174555</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715159174555</updated>
+    </task>
+    <task id="LOCAL-00011" summary="初始代码（使用dao接口实现了数据库的增删查改操作）">
+      <created>1715159277170</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715159277170</updated>
+    </task>
+    <task id="LOCAL-00012" summary="初始代码（使用dao接口实现了数据库的增删查改操作）">
+      <created>1715159490048</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715159490048</updated>
+    </task>
+    <task id="LOCAL-00013" summary="第一次在我的工作区提交初始代码（使用dao接口实现了数据库的增删查改操作）">
+      <created>1715159510087</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715159510087</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +205,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="gitee/mywork" />
+                        <option value="mywork" />
                       </list>
                     </value>
                   </entry>
@@ -156,9 +221,10 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="初始代码（使用dao接口实现了数据库的增删查改操作）" />
     <MESSAGE value="我的工作区第一次提价初始代码（使用dao接口实现了数据库的增删查改操作）" />
     <MESSAGE value="我的工作区第一次提交初始代码（使用dao接口实现了数据库的增删查改操作）" />
-    <option name="LAST_COMMIT_MESSAGE" value="我的工作区第一次提交初始代码（使用dao接口实现了数据库的增删查改操作）" />
+    <MESSAGE value="初始代码（使用dao接口实现了数据库的增删查改操作）" />
+    <MESSAGE value="第一次在我的工作区提交初始代码（使用dao接口实现了数据库的增删查改操作）" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次在我的工作区提交初始代码（使用dao接口实现了数据库的增删查改操作）" />
   </component>
 </project>

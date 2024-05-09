@@ -51,6 +51,7 @@ public class Crud extends Application {
         Button updateButton = new Button("Update");
         Button deleteButton = new Button("Delete");
         // Button action
+        // add按钮事件处理程序
         addButton.setOnAction(event -> {
             String i = Field1.getText();
             int id = Integer.parseInt(i);
@@ -66,30 +67,7 @@ public class Crud extends Application {
             Field4.clear();
         });
 
-        searchButton.setOnAction(event -> {
-            String idStr = Field1.getText();
-            if (!idStr.isEmpty()) {
-                try {
-                    int id = Integer.parseInt(idStr);
-                    User user = searchData(id);
-                    if (user != null) {
-                        Field2.setText(user.getName());
-                        Field3.setText(String.valueOf(user.getAge()));
-                        Field4.setText(user.getPosotion());
-                    } else {
-                        showAlert("Not Found", "No user found with ID: " + id);
-                        // 清空文本框
-                        Field2.clear();
-                        Field3.clear();
-                        Field4.clear();
-                    }
-                } catch (NumberFormatException e) {
-                    showAlert("Invalid input", "Please enter a valid ID.");
-                }
-            } else {
-                showAlert("Invalid input", "Please enter an ID to search.");
-            }
-        });
+
 
         // Update按钮事件处理程序
         updateButton.setOnAction(event -> {
@@ -118,6 +96,32 @@ public class Crud extends Application {
             Field1.clear();
         });
 
+        // search按钮事件处理程序
+        searchButton.setOnAction(event -> {
+            String idStr = Field1.getText();
+            if (!idStr.isEmpty()) {
+                try {
+                    int id = Integer.parseInt(idStr);
+                    User user = searchData(id);
+                    if (user != null) {
+                        Field2.setText(user.getName());
+                        Field3.setText(String.valueOf(user.getAge()));
+                        Field4.setText(user.getPosotion());
+                    } else {
+                        showAlert("Not Found", "No user found with ID: " + id);
+                        // 清空文本框
+                        Field2.clear();
+                        Field3.clear();
+                        Field4.clear();
+                    }
+                } catch (NumberFormatException e) {
+                    showAlert("Invalid input", "Please enter a valid ID.");
+                }
+            } else {
+                showAlert("Invalid input", "Please enter an ID to search.");
+            }
+        });
+
 
         // Layout
         GridPane root = new GridPane();
@@ -142,16 +146,7 @@ public class Crud extends Application {
 
     }
 
-    private void addData(int id, String name, int age, String posotion ) {
-        try (SqlSession session = sqlMapper.openSession()) {
-            User user = new User(id, name, age, posotion);
-            session.insert("addUser", user);
-            session.commit();
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     private User searchData(int id) {
         try (SqlSession session = sqlMapper.openSession()) {
@@ -164,6 +159,16 @@ public class Crud extends Application {
         }
     }
 
+    private void addData(int id, String name, int age, String posotion ) {
+        try (SqlSession session = sqlMapper.openSession()) {
+            User user = new User(id, name, age, posotion);
+            session.insert("addUser", user);
+            session.commit();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     // 删除员工信息
     private void deleteData(int id) {
