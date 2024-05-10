@@ -11,8 +11,7 @@
 <mapper namespace = "dao.UserMapper">
     <!-- select标签用于查询语句模板的编写，其中的id用于唯一标识SQL语句块
         Java通过id属性的值找对对应的SQL语句-->
-    <select  id = "getUserById" parameterType = "int"
-             resultType = "com.itheima.pojo.User">
+    <select  id = "getUserById" parameterType = "int" resultType = "com.itheima.pojo.User">
         select * from employee where id = #{id}
     </select>
 
@@ -32,7 +31,6 @@
     <select id="selectAllUser" resultType="map">
         SELECT * FROM employee
     </select>
-
 
 
 </mapper>

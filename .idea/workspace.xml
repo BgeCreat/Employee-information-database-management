@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a285b5e-71e0-4699-b2a8-160c1e744dca" name="Changes" comment="第一次在我的工作区提交初始代码（使用dao接口实现了数据库的增删查改操作）">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CRUDUI/Inquire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/MyBatisUtils.java" afterDir="false" />
+    <list default="true" id="6a285b5e-71e0-4699-b2a8-160c1e744dca" name="Changes" comment="初始代码（使用dao接口实现了数据库的增删查改操作）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CRUDUI/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CRUDUI/Crud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CRUDUI/Inquire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CRUDUI/Inquire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CRUDUI/Crud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CRUDUI/Crud.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/UserMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,6 +91,7 @@
       <workItem from="1715169774448" duration="6538000" />
       <workItem from="1715220042112" duration="6672000" />
       <workItem from="1715252623972" duration="5752000" />
+      <workItem from="1715299789294" duration="5670000" />
     </task>
     <task id="LOCAL-00001" summary="初始代码（使用dao接口实现了数据库的增删查改操作）">
       <created>1715154937503</created>

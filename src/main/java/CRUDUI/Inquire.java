@@ -19,6 +19,12 @@ public class Inquire extends Application {
 
     private SqlSession sqlSession = MyBatisUtils.getSession();
 
+    private TextField Field1;
+    private TextField Field2;
+    private TextField Field3;
+    private TextField Field4;
+
+    private HBox resultContainer;
     public static void main(String[] args) {
         launch(args);
     }
@@ -48,16 +54,16 @@ public class Inquire extends Application {
 
         //标签和按钮
         Label Label1 = new Label("id:");
-        TextField Field1 = new TextField();
+        Field1 = new TextField();
 
         Label Label2 = new Label("name:");
-        TextField Field2 = new TextField();
+        Field2 = new TextField();
 
         Label Label3 = new Label("age:");
-        TextField Field3 = new TextField();
+        Field3 = new TextField();
 
         Label Label4 = new Label("posotion:");
-        TextField Field4 = new TextField();
+        Field4 = new TextField();
 
         Button searchButton = new Button("Search");
 
@@ -71,7 +77,7 @@ public class Inquire extends Application {
         gp.add(Field3, 5, 0);
         gp.add(Label4, 6, 0);
         gp.add(Field4, 7, 0);
-        HBox resultContainer = new HBox();//显示查询结果的容器
+        resultContainer = new HBox();//显示查询结果的容器
         resultContainer.setSpacing(10); // 设置间距
         VBox root = new VBox();
         root.getChildren().addAll(tableView, gp, searchButton,resultContainer);
@@ -79,35 +85,13 @@ public class Inquire extends Application {
         // search按钮事件处理程序
         searchButton.setOnAction(event -> {
             String idStr = Field1.getText();
+
             if (!idStr.isEmpty()) {
-                try {
-                    int id = Integer.parseInt(idStr);//将字符串转化为整型
-                    User user = searchData(id);//返回查找出的类
-                    if (user != null) {//查找成功
-                        Field2.setText(user.getName());
-                        Field3.setText(String.valueOf(user.getAge()));//将整型转化为字符串
-                        Field4.setText(user.getPosotion());
-                        // 将查询结果添加到结果容器中
-                        resultContainer.getChildren().clear(); // 清空之前的结果
-                        resultContainer.getChildren().add(new Label("查询结果："));
-                        resultContainer.getChildren().add(new Label("ID：" + user.getId()));
-                        resultContainer.getChildren().add(new Label("姓名：" + user.getName()));
-                        resultContainer.getChildren().add(new Label("年龄：" + user.getAge()));
-                        resultContainer.getChildren().add(new Label("职位：" + user.getPosotion()));
-                    } else {//查找失败
-                        showAlert("查找失败", "没有找到id: " + id);
-                        // 清空文本框
-                        Field2.clear();
-                        Field3.clear();
-                        Field4.clear();
-                    }
-                } catch (NumberFormatException e) {//字符串转化为数字异常
-                    e.printStackTrace();
-                    showAlert("报错", "NumberFormatException异常抛出");
-                }
+                searchDataById(idStr);
             } else {
                 showAlert("无效输入", "请输入id进行检索.");
             }
+
         });
 
         //启动
@@ -117,7 +101,36 @@ public class Inquire extends Application {
 
     }
 
-    //用于从数据库中根据用户ID搜索并返回对应的用户信息
+    private void searchDataById(String idStr) {
+        try {
+            int id = Integer.parseInt(idStr);//将字符串转化为整型
+            User user = searchData(id);//返回查找出的类
+            if (user != null) {//查找成功
+                Field2.setText(user.getName());
+                Field3.setText(String.valueOf(user.getAge()));//将整型转化为字符串
+                Field4.setText(user.getPosotion());
+                // 将查询结果添加到结果容器中
+                resultContainer.getChildren().clear(); // 清空之前的结果
+                resultContainer.getChildren().add(new Label("查询结果："));
+                resultContainer.getChildren().add(new Label("ID：" + user.getId()));
+                resultContainer.getChildren().add(new Label("姓名：" + user.getName()));
+                resultContainer.getChildren().add(new Label("年龄：" + user.getAge()));
+                resultContainer.getChildren().add(new Label("职位：" + user.getPosotion()));
+            } else {//查找失败
+                showAlert("查找失败", "没有找到id: " + id);
+                // 清空文本框
+                Field2.clear();
+                Field3.clear();
+                Field4.clear();
+            }
+        } catch (NumberFormatException e) {//字符串转化为数字异常
+            e.printStackTrace();
+            showAlert("报错", "NumberFormatException异常抛出");
+        }
+    }
+
+
+        //用于从数据库中根据用户ID搜索并返回对应的用户信息
     private User searchData(int id) {
         try {
             User user = sqlSession.selectOne("getUserById", id);
