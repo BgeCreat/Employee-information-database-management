@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a285b5e-71e0-4699-b2a8-160c1e744dca" name="Changes" comment="初始代码（使用dao接口实现了数据库的增删查改操作）">
+    <list default="true" id="6a285b5e-71e0-4699-b2a8-160c1e744dca" name="Changes" comment="更新inquire（将查找按钮中按照id查找的功能封装到一个方法中）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CRUDUI/Inquire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CRUDUI/Inquire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,26 +49,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Java/idea/idea_code/experiment1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/Java/idea/idea_code/experiment2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Java\idea\idea_code\experiment2\src\main\java" />
@@ -92,6 +91,8 @@
       <workItem from="1715220042112" duration="6672000" />
       <workItem from="1715252623972" duration="5752000" />
       <workItem from="1715299789294" duration="5670000" />
+      <workItem from="1715566830359" duration="882000" />
+      <workItem from="1715953229292" duration="2386000" />
     </task>
     <task id="LOCAL-00001" summary="初始代码（使用dao接口实现了数据库的增删查改操作）">
       <created>1715154937503</created>
@@ -184,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715159510087</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="更新inquire（将查找按钮中按照id查找的功能封装到一个方法中）">
+      <created>1715435102568</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715435102568</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +209,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="mywork" />
+                        <option value="gitee/mywork" />
                       </list>
                     </value>
                   </entry>
@@ -221,6 +229,7 @@
     <MESSAGE value="我的工作区第一次提交初始代码（使用dao接口实现了数据库的增删查改操作）" />
     <MESSAGE value="初始代码（使用dao接口实现了数据库的增删查改操作）" />
     <MESSAGE value="第一次在我的工作区提交初始代码（使用dao接口实现了数据库的增删查改操作）" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次在我的工作区提交初始代码（使用dao接口实现了数据库的增删查改操作）" />
+    <MESSAGE value="更新inquire（将查找按钮中按照id查找的功能封装到一个方法中）" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新inquire（将查找按钮中按照id查找的功能封装到一个方法中）" />
   </component>
 </project>

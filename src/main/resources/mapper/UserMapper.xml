@@ -32,5 +32,13 @@
         SELECT * FROM employee
     </select>
 
+    <select id="getUserByName" parameterType="String" resultType="com.itheima.pojo.User">
+        SELECT * FROM employee WHERE name = #{name}
+    </select>
+
+    <select id="getUserByPosotion" parameterType="String" resultType="com.itheima.pojo.User">
+        SELECT * FROM employee WHERE posotion = #{posotion}
+    </select>
+
 
 </mapper>

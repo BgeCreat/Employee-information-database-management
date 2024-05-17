@@ -85,14 +85,25 @@ public class Inquire extends Application {
         // search按钮事件处理程序
         searchButton.setOnAction(event -> {
             String idStr = Field1.getText();
+            String nameStr = Field2.getText(); // 获取用户输入的姓名
+            String posotionStr = Field4.getText();
 
+            //四选一
             if (!idStr.isEmpty()) {
                 searchDataById(idStr);
-            } else {
-                showAlert("无效输入", "请输入id进行检索.");
+            }
+            else if (idStr.isEmpty() && !nameStr.isEmpty()) {
+                searchDataByName(nameStr); // 调用根据姓名进行搜索的方法
+            }
+            else if(nameStr.isEmpty() && !posotionStr.isEmpty()){
+                searchDataByposotion();
+            }
+            else {
+                showAlert("无效输入", "请输入id或姓名进行检索.");
             }
 
         });
+
 
         //启动
         Scene scene = new Scene(root, 1000, 500);
@@ -129,8 +140,65 @@ public class Inquire extends Application {
         }
     }
 
+    private void searchDataByName(String name) {
+        try {
+            List<User> userList = sqlSession.selectList("getUserByName", name); // 根据姓名从数据库中搜索用户列表
+            if (!userList.isEmpty()) {//查找成功
+                User user = userList.get(0); // 假设只返回第一个匹配的用户
+                Field1.setText(String.valueOf(user.getId()));
+                Field3.setText(String.valueOf(user.getAge()));//将整型转化为字符串
+                Field4.setText(user.getPosotion());
+                // 将查询结果添加到结果容器中
+                resultContainer.getChildren().clear(); // 清空之前的结果
+                resultContainer.getChildren().add(new Label("查询结果："));
+                resultContainer.getChildren().add(new Label("ID：" + user.getId()));
+                resultContainer.getChildren().add(new Label("姓名：" + user.getName()));
+                resultContainer.getChildren().add(new Label("年龄：" + user.getAge()));
+                resultContainer.getChildren().add(new Label("职位：" + user.getPosotion()));
+            } else {//查找失败
+                showAlert("查找失败", "没有找到姓名: " + name);
+                // 清空文本框
+                Field1.clear();
+                Field3.clear();
+                Field4.clear();
+            }
+        } catch (Exception e) {//处理异常
+            e.printStackTrace();
+            showAlert("报错", "数据库查找异常抛出");
+        }
+    }
 
-        //用于从数据库中根据用户ID搜索并返回对应的用户信息
+    private void searchDataByposotion() {
+        try {
+            String posotionStr = Field4.getText(); // 获取用户输入的职位
+            List<User> userList = sqlSession.selectList("getUserByPosotion", posotionStr); // 根据职位从数据库中搜索用户列表
+            if (!userList.isEmpty()) { // 查找成功
+                User user = userList.get(0); // 假设只返回第一个匹配的用户
+                Field1.setText(String.valueOf(user.getId()));
+                Field2.setText(user.getName());
+                Field3.setText(String.valueOf(user.getAge()));
+                // 将查询结果添加到结果容器中
+                resultContainer.getChildren().clear(); // 清空之前的结果
+                resultContainer.getChildren().add(new Label("查询结果："));
+                resultContainer.getChildren().add(new Label("ID：" + user.getId()));
+                resultContainer.getChildren().add(new Label("姓名：" + user.getName()));
+                resultContainer.getChildren().add(new Label("年龄：" + user.getAge()));
+                resultContainer.getChildren().add(new Label("职位：" + user.getPosotion()));
+            } else { // 查找失败
+                showAlert("查找失败", "没有找到职位: " + posotionStr);
+                // 清空文本框
+                Field1.clear();
+                Field2.clear();
+                Field3.clear();
+            }
+        } catch (Exception e) { // 处理异常
+            e.printStackTrace();
+            showAlert("报错", "数据库查找异常抛出");
+        }
+    }
+
+
+    //用于从数据库中根据用户ID搜索并返回对应的用户信息
     private User searchData(int id) {
         try {
             User user = sqlSession.selectOne("getUserById", id);
